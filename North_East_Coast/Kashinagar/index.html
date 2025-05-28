@@ -197,6 +197,13 @@
             </ol>
         </nav>
 
+        <!-- Add Download as PDF Button -->
+        <div style="position: fixed; bottom: 30px; right: 30px; z-index: 9999;">
+            <button id="download-pdf-btn" class="btn btn-danger btn-lg shadow">
+                <i class="bi bi-file-earmark-pdf"></i> Download as PDF
+            </button>
+        </div>
+
         <div class="dam-header text-center">
             <div class="river-basin-badge mb-2">
                 <i class="bi bi-water"></i> North_East_Coast River Basin
@@ -216,12 +223,12 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
-                                    <p><strong>Dam ID:</strong> S1203</p>
+                                    <p><strong>Watershed ID:</strong> S1203</p>
                                     <p><strong>Location:</strong> 18.858, 83.861</p>
                                     <p><a href="https://www.google.com/maps?q=18.858,83.861" target="_blank" class="btn btn-sm btn-outline-primary">View on Google Maps</a></p>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                    <p><strong>Watershed Area:</strong> 7919.9 km²</p>
+                                    <p><strong>Catchment Area:</strong> 7919.9 km²</p>
                                     <p><strong>Perimeter:</strong> 824.47 km</p>
                                     <p><strong>Circularity Ratio:</strong> 0.146</p>
                                 </div>
@@ -240,7 +247,7 @@
                             <table class="table table-sm">
                                 <tbody>
                                     <tr>
-                                        <th scope="row">Dam Name:</th>
+                                        <th scope="row">Watershed Name:</th>
                                         <td>Kashinagar</td>
                                     </tr>
                                     <tr>
@@ -250,16 +257,11 @@
 
                                     <tr>
                                         <th scope="row">Location:</th>
-                                        <td>18.857222205308, 83.860555570644</td>
+                                        <td>18.857, 83.861</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Map:</th>
                                         <td><a href="https://www.google.com/maps?q=18.857222205308,83.860555570644" target="_blank">View on Google Maps</a></td>
-                                    </tr>
-
-                                    <tr>
-                                        <th scope="row">Station Id:</th>
-                                        <td>S1203-Kashinagar</td>
                                     </tr>
 
                                 </tbody>
@@ -272,12 +274,12 @@
                         <div class="card-body">
                             <h5 class="card-title">Available Data</h5>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="bi bi-cloud-sun"></i> <a href="#climatic">Climatic Data Available</a></li>
-                                <li class="list-group-item"><i class="bi bi-map"></i> <a href="#topographical">Topographical Data Available</a></li>
-                                <li class="list-group-item"><i class="bi bi-layers"></i> <a href="#geological">Geological Data Available</a></li>
-                                <li class="list-group-item"><i class="bi bi-tree"></i> <a href="#lulc">Land Use & Vegetation Data Available</a></li>
-                                <li class="list-group-item"><i class="bi bi-moisture"></i> <a href="#soil">Soil Data Available</a></li>
-                                <li class="list-group-item"><i class="bi bi-people"></i> <a href="#human-activity">Human Activity Data Available</a></li>
+                                <li class="list-group-item"><i class="bi bi-cloud-sun"></i> <a href="#climatic">Climatic Attributes Available</a></li>
+                                <li class="list-group-item"><i class="bi bi-map"></i> <a href="#topographical">Topographical Attributes Available</a></li>
+                                <li class="list-group-item"><i class="bi bi-layers"></i> <a href="#geological">Geological Attributes Available</a></li>
+                                <li class="list-group-item"><i class="bi bi-tree"></i> <a href="#lulc">LULC Attributes Available</a></li>
+                                <li class="list-group-item"><i class="bi bi-moisture"></i> <a href="#soil">Soil Attributes Available</a></li>
+                                <li class="list-group-item"><i class="bi bi-people"></i> <a href="#human-activity">Human-Induced Activities Available</a></li>
 
                             </ul>
                         </div>
@@ -287,13 +289,13 @@
         </div>
 
         <div class="section" id="topographical">
-            <h2><i class="bi bi-map"></i> Topographical Data</h2>
+            <h2><i class="bi bi-map"></i> Topographical Attributes</h2>
 
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h5>Elevation & Slope Characteristics</h5>
+                            <h5>Elevation & Slope</h5>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -389,15 +391,12 @@
         </div>
 
         <div class="section" id="climatic">
-            <h2><i class="bi bi-cloud-sun"></i> Climatic Data</h2>
+            <h2><i class="bi bi-cloud-sun"></i> Climatic Attributes</h2>
             
 
                 <div class="row mb-4">
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-header">
-                                <h5>Climate Characteristics</h5>
-                            </div>
                             <div class="card-body">
                                 <div class="row">
             
@@ -436,7 +435,7 @@
                                     <div class="card h-100">
                                         <div class="card-body">
                                             <h6 class="card-title">High Precipitation Season</h6>
-                                            <p class="card-text">3</p>
+                                            <p class="card-text">Monsoon</p>
                                         </div>
                                     </div>
                                 </div>
@@ -445,7 +444,7 @@
                                     <div class="card h-100">
                                         <div class="card-body">
                                             <h6 class="card-title">Low Precipitation Season</h6>
-                                            <p class="card-text">4</p>
+                                            <p class="card-text">Post-Monsoon</p>
                                         </div>
                                     </div>
                                 </div>
@@ -491,18 +490,43 @@
                 </tr>
 
                 <tr>
+                    <th scope="row">Maximum Wind Speed (m/s)</th>
+                    <td>8.57</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Mean Wind Speed (m/s)</th>
+                    <td>1.469</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Evaporation (mm)</th>
+                    <td>2.714</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">PET (mm)</th>
+                    <td>4.539</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Maximum Precipitation (mm)</th>
+                    <td>161.92</td>
+                </tr>
+
+                <tr>
                     <th scope="row">Low Precipitation Frequency (days/year)</th>
                     <td>226.884</td>
                 </tr>
 
                 <tr>
                     <th scope="row">High Precipitation Season</th>
-                    <td>3</td>
+                    <td>Monsoon</td>
                 </tr>
 
                 <tr>
                     <th scope="row">Low Precipitation Season</th>
-                    <td>4</td>
+                    <td>Post-Monsoon</td>
                 </tr>
 
                 <tr>
@@ -579,11 +603,11 @@
                 <div class="col-12 mb-4">
                     <div class="card">
                         <div class="card-header">
-                            <h5>Yearly Average Precipitation</h5>
+                            <h5>Annual Precipitation</h5>
                         </div>
                         <div class="card-body">
-                            <img src="images/precip_Kashinagar.webp" class="img-fluid" alt="Yearly Average Precipitation">
-                            <p class="mt-2">Annual average precipitation values measured in millimeters.</p>
+                            <img src="images/precip_Kashinagar.webp" class="img-fluid" alt="Annual Precipitation">
+                            <p class="mt-2"></p>
                         </div>
                     </div>
                 </div>
@@ -591,11 +615,11 @@
                 <div class="col-12 mb-4">
                     <div class="card">
                         <div class="card-header">
-                            <h5>Yearly Average Evaporation</h5>
+                            <h5>Annual Evaporation</h5>
                         </div>
                         <div class="card-body">
-                            <img src="images/evap_Kashinagar.webp" class="img-fluid" alt="Yearly Average Evaporation">
-                            <p class="mt-2">Annual average evaporation measurements.</p>
+                            <img src="images/evap_Kashinagar.webp" class="img-fluid" alt="Annual Evaporation">
+                            <p class="mt-2"></p>
                         </div>
                     </div>
                 </div>
@@ -603,11 +627,11 @@
                 <div class="col-12 mb-4">
                     <div class="card">
                         <div class="card-header">
-                            <h5>Yearly Average Wind Speed</h5>
+                            <h5>Annual Mean Wind Speed</h5>
                         </div>
                         <div class="card-body">
-                            <img src="images/wind_Kashinagar.webp" class="img-fluid" alt="Yearly Average Wind Speed">
-                            <p class="mt-2">Annual average wind speed measurements.</p>
+                            <img src="images/wind_Kashinagar.webp" class="img-fluid" alt="Annual Mean Wind Speed">
+                            <p class="mt-2"></p>
                         </div>
                     </div>
                 </div>
@@ -615,11 +639,11 @@
                 <div class="col-12 mb-4">
                     <div class="card">
                         <div class="card-header">
-                            <h5>Yearly Average Temperatures</h5>
+                            <h5>Annual Temperatures</h5>
                         </div>
                         <div class="card-body">
-                            <img src="images/temp_Kashinagar.webp" class="img-fluid" alt="Yearly Average Temperatures">
-                            <p class="mt-2">Annual average maximum and minimum temperature values in degrees Celsius.</p>
+                            <img src="images/temp_Kashinagar.webp" class="img-fluid" alt="Annual Temperatures">
+                            <p class="mt-2"></p>
                         </div>
                     </div>
                 </div>
@@ -627,14 +651,11 @@
         </div>
 
         <div class="section" id="geological">
-            <h2><i class="bi bi-layers"></i> Geological Data</h2>
+            <h2><i class="bi bi-layers"></i> Geological Attributes</h2>
 
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header">
-                            <h5>Lithology & Subsurface Characteristics</h5>
-                        </div>
                         <div class="card-body">
 
                             <div class="row mb-4">
@@ -642,7 +663,7 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h6>Dominant Lithology</h6>
-                                            <p class="mb-1"><strong>8</strong></p>
+                                            <p class="mb-1"><strong>Metamorphic rocks</strong></p>
                                             <p><small>Coverage: 0.667</small></p>
 
                                         </div>
@@ -653,7 +674,7 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h6>Secondary Lithology</h6>
-                                            <p class="mb-1"><strong>1</strong></p>
+                                            <p class="mb-1"><strong>Unconsolidated sediments</strong></p>
                                             <p><small>Coverage: 0.333</small></p>
 
                                         </div>
@@ -699,7 +720,7 @@
 
                                         <tr>
                                             <th scope="row">Dominant Lithological Class</th>
-                                            <td>8</td>
+                                            <td>Metamorphic rocks</td>
                                         </tr>
 
                                         <tr>
@@ -709,7 +730,7 @@
 
                                         <tr>
                                             <th scope="row">Second Dominant Lithological Class</th>
-                                            <td>1</td>
+                                            <td>Unconsolidated sediments</td>
                                         </tr>
 
                                         <tr>
@@ -748,13 +769,13 @@
                     <div class="row">
                         <div class="col-12">
                             <img src="images/groundwater_Kashinagar.webp" class="img-fluid" alt="Groundwater Time Series">
-                            <p class="mt-2">Annual average groundwater level measurements in the dam area.</p>
+                            <p class="mt-2">Annual average groundwater level measurements in the watershed area.</p>
                             <div class="row mt-3">
                                 <div class="col-md-4">
                                     <div class="card text-center">
                                         <div class="card-body">
                                             <h6>Average Level</h6>
-                                            <div class="stat-value text-primary">3.34</div>
+                                            <div class="stat-value text-primary">3.34 m</div>
                                         </div>
                                     </div>
                                 </div>
@@ -762,7 +783,7 @@
                                     <div class="card text-center">
                                         <div class="card-body">
                                             <h6>Maximum Level</h6>
-                                            <div class="stat-value text-success">4.27</div>
+                                            <div class="stat-value text-success">4.27 m</div>
                                         </div>
                                     </div>
                                 </div>
@@ -770,7 +791,7 @@
                                     <div class="card text-center">
                                         <div class="card-body">
                                             <h6>Minimum Level</h6>
-                                            <div class="stat-value text-danger">1.96</div>
+                                            <div class="stat-value text-danger">1.96 m</div>
                                         </div>
                                     </div>
                                 </div>
@@ -782,7 +803,7 @@
         </div>
 
         <div class="section" id="lulc">
-            <h2><i class="bi bi-tree"></i> Land Use & Vegetation Data</h2>
+            <h2><i class="bi bi-tree"></i> LULC Attributes</h2>
 
             <div class="row mb-4">
                 <div class="col-12">
@@ -797,7 +818,7 @@
                                     <div class="card">
                                         <div class="card-body text-center">
                                             <h6>Dominant Land Use Class</h6>
-                                            <div class="stat-value text-success">3</div>
+                                            <div class="stat-value text-success">Forest Land</div>
                                         </div>
                                     </div>
                                 </div>
@@ -913,7 +934,7 @@
 
                                         <tr>
                                             <th scope="row">Dominant LULC Class</th>
-                                            <td>3</td>
+                                            <td>Forest Land</td>
                                         </tr>
 
                                         <tr>
@@ -1036,7 +1057,7 @@
         </div>
 
         <div class="section" id="soil">
-            <h2><i class="bi bi-moisture"></i> Soil Characteristics</h2>
+            <h2><i class="bi bi-moisture"></i> Soil Attributes</h2>
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="card">
@@ -1052,7 +1073,7 @@
                                         <div class="card-body">
                                             <h6 class="card-title">Available Water Capacity</h6>
                                             <div class="stat-value text-primary">140</div>
-                                            <div class="stat-label">mm</div>
+                                            <div class="stat-label">mm/m</div>
                                         </div>
                                     </div>
                                 </div>
@@ -1110,7 +1131,7 @@
                                         </tr>
 
                                         <tr>
-                                            <th scope="row">AWC (mm/m)</th>
+                                            <th scope="row">AWC (mm)</th>
                                             <td>140</td>
                                         </tr>
 
@@ -1144,7 +1165,7 @@
         </div>
 
         <div class="section" id="human-activity">
-            <h2><i class="bi bi-people"></i> Human Activity</h2>
+            <h2><i class="bi bi-people"></i> Human-Induced Activities</h2>
             <div class="row mb-4">
                 <div class="col-12">
                     <div class="card">
@@ -1234,103 +1255,100 @@
             </div>
         </div>
 
-        
-        <div class="section" id="hydrological-signature">
-            <h2><i class="bi bi-droplet"></i> Hydrological Signature</h2>
-            <div class="row mb-4">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5>Hydrological Signature Parameters</h5>
-                        </div>
-                        <div class="card-body">
-                            <table class="table table-striped excel-data-table">
-                                <tbody>
-    
-                                    <tr>
-                                        <th scope="row">Q5 (m³/sec)</th>
-                                        <td>0.0</td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th scope="row">Q95 (m³/sec)</th>
-                                        <td>143.07</td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th scope="row">High Discharge Frequency (days/year)</th>
-                                        <td>13.85</td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th scope="row">Low Discharge Frequency (days/year)</th>
-                                        <td>168.9</td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th scope="row">Zero Discharge Frequency (days/year)</th>
-                                        <td>96.65</td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th scope="row">Slope of Flow Duration Curve</th>
-                                        <td>10.332</td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th scope="row">High Spell Days</th>
-                                        <td>2.3277</td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th scope="row">Low Spell Days</th>
-                                        <td>48.957</td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th scope="row">Baseflow Index</th>
-                                        <td>0.19256</td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th scope="row">Mean Half-Flow Days</th>
-                                        <td>72</td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th scope="row">Mean Discharge (mm/day)</th>
-                                        <td>4.7969</td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th scope="row">Runoff Coefficient</th>
-                                        <td>0.74192</td>
-                                    </tr>
-            
-                                    <tr>
-                                        <th scope="row">Elasticity</th>
-                                        <td>0.085121</td>
-                                    </tr>
-            
-                                </tbody>
-                            </table>
+                <div class="section" id="hydrological-signature">
+                    <h2><i class="bi bi-droplet"></i> Hydrological Signature</h2>
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Hydrological Signature Parameters</h5>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-striped excel-data-table">
+                                        <tbody>
+                
+                                            <tr>
+                                                <th scope="row">Q5 (m³/sec)</th>
+                                                <td>0</td>
+                                            </tr>
+                    
+                                            <tr>
+                                                <th scope="row">Q95 (m³/sec)</th>
+                                                <td>143.07</td>
+                                            </tr>
+                    
+                                            <tr>
+                                                <th scope="row">High Discharge Frequency (days/year)</th>
+                                                <td>13.85</td>
+                                            </tr>
+                    
+                                            <tr>
+                                                <th scope="row">Low Discharge Frequency (days/year)</th>
+                                                <td>168.9</td>
+                                            </tr>
+                    
+                                            <tr>
+                                                <th scope="row">Zero Discharge Frequency (days/year)</th>
+                                                <td>96.65</td>
+                                            </tr>
+                    
+                                            <tr>
+                                                <th scope="row">Slope of Flow Duration Curve</th>
+                                                <td>10.332</td>
+                                            </tr>
+                    
+                                            <tr>
+                                                <th scope="row">High Spell Days</th>
+                                                <td>2.328</td>
+                                            </tr>
+                    
+                                            <tr>
+                                                <th scope="row">Low Spell Days</th>
+                                                <td>48.957</td>
+                                            </tr>
+                    
+                                            <tr>
+                                                <th scope="row">Baseflow Index</th>
+                                                <td>0.193</td>
+                                            </tr>
+                    
+                                            <tr>
+                                                <th scope="row">Mean Half-Flow Days</th>
+                                                <td>72</td>
+                                            </tr>
+                    
+                                            <tr>
+                                                <th scope="row">Mean Discharge (mm/day)</th>
+                                                <td>4.797</td>
+                                            </tr>
+                    
+                                            <tr>
+                                                <th scope="row">Runoff Coefficient</th>
+                                                <td>0.742</td>
+                                            </tr>
+                    
+                                            <tr>
+                                                <th scope="row">Elasticity</th>
+                                                <td>0.085</td>
+                                            </tr>
+                    
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    <footer class="pt-3 my-4 text-muted border-top">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>Report generated on 2025-05-22 at 16:47:23</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p>HydroLab Dam Analysis Project</p>
-                </div>
-            </div>
-        </footer>
+                
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script>
+    document.getElementById('download-pdf-btn').addEventListener('click', function () {
+        window.print();
+    });
+</script>
 </body>
 </html>
