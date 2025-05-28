@@ -54,6 +54,15 @@
             <p class="lead">Analysis of 99 watersheds within the Narmada basin</p>
         </div>
 
+        <div style="position: fixed; bottom: 30px; left: 30px; z-index: 9999;">
+            <button id="back-to-map-btn" class="btn btn-primary btn-lg shadow">
+                <i class="bi bi-map"></i> Back to Map
+            </button>
+            <button id="back-to-home-btn" class="btn btn-success btn-lg shadow">
+                <i class="bi bi-house"></i> Back to Home
+            </button>
+        </div>
+
         <div class="section">
             <h2><i class="bi bi-water"></i> Watersheds in Narmada Basin</h2>
             <div class="row">
@@ -2255,5 +2264,24 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Handle back to map button
+        document.getElementById('back-to-map-btn').addEventListener('click', function() {
+            // Get the referrer URL if it exists
+            const referrer = document.referrer;
+            
+            // Check if referrer is from your map site
+            if (referrer && referrer.includes('hydromonitoring.github.io/wain-dataset/')) {
+                window.location.href = referrer; // Go back to the exact page that referred
+            } else {
+                // Fallback to main map URL if referrer is not available
+                window.location.href = 'https://hydromonitoring.github.io/wain-dataset/';
+            }
+        });
+        // Add this to the existing <script> section that has the back-to-map-btn handler
+        document.getElementById('back-to-home-btn').addEventListener('click', function() {
+            window.location.href = 'https://hydromonitoring.github.io/lab-datasets/';
+        });
+    </script>
 </body>
 </html>

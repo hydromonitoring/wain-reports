@@ -208,6 +208,9 @@
             <button id="back-to-map-btn" class="btn btn-primary btn-lg shadow">
                 <i class="bi bi-map"></i> Back to Map
             </button>
+            <button id="back-to-home-btn" class="btn btn-success btn-lg shadow">
+                <i class="bi bi-house"></i> Back to Home
+            </button>
         </div>
 
         <div class="dam-header text-center">
@@ -409,7 +412,7 @@
                                     <div class="col-md-3 col-sm-6 mb-3">
                                         <div class="metric-card primary">
                                             <div class="mb-2"><i class="bi bi-cloud-rain fs-3 text-primary"></i></div>
-                                            <h6 class="card-title">Avg Precipitation</h6>
+                                            <h6 class="card-title">Mean Precipitation</h6>
                                             <div class="stat-value">2.892</div>
                                             <div class="stat-label">mm/day</div>
                                         </div>
@@ -578,7 +581,7 @@
                     <div class="card text-center h-100">
                         <div class="card-body">
                             <h6 class="card-title">Annual Mean Evaporation</h6>
-                            <div class="stat-value text-warning">2.46</div>
+                            <div class="stat-value text-warning">2.46 mm</div>
                             <div class="stat-label">Range: 0.55 - 4.7</div>
                         </div>
                     </div>
@@ -598,7 +601,7 @@
                     <div class="card text-center h-100">
                         <div class="card-body">
                             <h6 class="card-title">Mean Wind Speed</h6>
-                            <div class="stat-value text-success">2.39</div>
+                            <div class="stat-value text-success">2.39 m/s</div>
                             <div class="stat-label">Range: 0.59 - 7.21</div>
                         </div>
                     </div>
@@ -1263,6 +1266,10 @@
                 // Fallback to main map URL if referrer is not available
                 window.location.href = 'https://hydromonitoring.github.io/wain-dataset/';
             }
+        });
+        // Add this to the existing <script> section that has the back-to-map-btn handler
+        document.getElementById('back-to-home-btn').addEventListener('click', function() {
+            window.location.href = 'https://hydromonitoring.github.io/lab-datasets/';
         });
     </script>
 </body>

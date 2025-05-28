@@ -208,6 +208,9 @@
             <button id="back-to-map-btn" class="btn btn-primary btn-lg shadow">
                 <i class="bi bi-map"></i> Back to Map
             </button>
+            <button id="back-to-home-btn" class="btn btn-success btn-lg shadow">
+                <i class="bi bi-house"></i> Back to Home
+            </button>
         </div>
 
         <div class="dam-header text-center">
@@ -308,7 +311,7 @@
                     <div class="card text-center h-100">
                         <div class="card-body">
                             <h6 class="card-title">Annual Mean Evaporation</h6>
-                            <div class="stat-value text-warning">3.24</div>
+                            <div class="stat-value text-warning">3.24 mm</div>
                             <div class="stat-label">Range: 0.4 - 5.49</div>
                         </div>
                     </div>
@@ -328,7 +331,7 @@
                     <div class="card text-center h-100">
                         <div class="card-body">
                             <h6 class="card-title">Mean Wind Speed</h6>
-                            <div class="stat-value text-success">1.22</div>
+                            <div class="stat-value text-success">1.22 m/s</div>
                             <div class="stat-label">Range: 0.4 - 4.53</div>
                         </div>
                     </div>
@@ -497,6 +500,10 @@
                 // Fallback to main map URL if referrer is not available
                 window.location.href = 'https://hydromonitoring.github.io/wain-dataset/';
             }
+        });
+        // Add this to the existing <script> section that has the back-to-map-btn handler
+        document.getElementById('back-to-home-btn').addEventListener('click', function() {
+            window.location.href = 'https://hydromonitoring.github.io/lab-datasets/';
         });
     </script>
 </body>
